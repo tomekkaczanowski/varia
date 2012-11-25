@@ -4,13 +4,14 @@ apply plugin: 'eclipse'
 subprojects {
     apply plugin: 'java';
     apply plugin: 'eclipse'
+    apply plugin: 'idea'
 
     repositories {
         mavenCentral()
     }
 
     dependencies {
-        testCompile 'org.testng:testng:6.5.2'
+        testCompile 'org.testng:testng:6.8'
     }
 
     test {
@@ -21,5 +22,12 @@ subprojects {
 project(':awaitility_example') {
     dependencies {
         testCompile 'com.jayway.awaitility:awaitility:1.3.4'
+    }
+}
+
+project(':fest_asserts_spring_mvc') {
+    dependencies {
+	compile 'org.springframework:spring-webmvc:3.1.1.RELEASE'
+	compile 'org.easytesting:fest-assert:1.4'
     }
 }

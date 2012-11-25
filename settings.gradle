@@ -1,1 +1,2 @@
-include 'awaitility_example'
+include 'awaitility_example',
+	'fest_asserts_spring_mvc'
